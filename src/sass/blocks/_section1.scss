@@ -1,0 +1,32 @@
+
+.section-1 {
+	padding: 50px 0px 10px 0px;
+	.promo-content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		&__button{
+			padding: 28px 12px 28px 12px;
+		}
+	}
+	.blok-ikon {
+		padding: 60px 0px 60px 0px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		&__ikon {
+			flex: 0 1 130px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			img {
+
+			}
+		}
+		&__text {
+			margin: 20px 0px 0px 0px;
+			text-align: center;
+		}
+	
+	}
+}
