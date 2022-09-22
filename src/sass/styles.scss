@@ -1,71 +1,25 @@
+@import "base/variables";
+@import "base/mixins";
+@import "base/font";
 
 
-//MuseoModerno
-//Museo Sans
-
-/*------------Подключение шрифта-----------------*/
-//&display=swap - добавить при подключении через плагин
-
-/* -------------------------------------- */
+* {
+	font-family: 'MuseoModerno';
+}
 html {
 	height: 100%;
 }
 body {
 	height: 100%;
-	font-family: 'Museo Sans';
+	
 }
-.wrapper {
-	height: 100%;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
+.container {
+	max-width: 950px;
+	padding: 0px 15px 0px 15px;
+	margin: 0px auto;
+	box-sizing: content-box;
 	
-	.container {
-		max-width: 950px;
-		padding: 0px 15px 0px 15px;
-		margin: 0px auto;
-		box-sizing: content-box;
-		
-	}
-	/*-----------------------------*/
-	.header {
-	// background-color: rgb(195, 224, 193);
-	}
-	
-	/*-----------------------------*/
-	.promo {
-		//flex: 1 1 auto;
-		min-height: 650px;
-		background: url(../../img/bg.png) center (center/cover) no-repeat;
-	}
-	/*-----------------------------*/
-	.footer {
-		//background-color: rgb(136, 130, 130);
-	
-	}
-	/*-----------------------------*/
 }
-
-.btn {
-	button {
-		background-color: #c70101;
-	
-	}
-}
-
-
-
-
-
-// Цвета
-$green: rgba(0, 128, 0, 0.9);
-$black-titel:#252b42;
-$grey: #737373;
-//Размеры
-
-//@import "_header";
-//@import "_page";
-//@import "_footer";
-@import "blocks/_header";
-@import "blocks/_section1";
-@import "blocks/_footer";
+@import "blocks/promo";
+@import "blocks/header";
+@import "blocks/buttons";
