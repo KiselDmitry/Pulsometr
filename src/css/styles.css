@@ -72,6 +72,11 @@ body {
   color: #fff;
   font-size: 36px;
 }
+@media (max-width: 576px) {
+  .title-section_left {
+    font-size: 24px;
+  }
+}
 
 .promo {
   min-height: 650px;
@@ -339,6 +344,12 @@ body {
   min-height: 680px;
   padding: 100px 0px 92px 0px;
   background: url("../img/consultation.jpg") center center/cover no-repeat;
+}
+@media (max-width: 576px) {
+  .consultation {
+    padding: 30px 0px 30px 0px;
+    min-height: 500px;
+  }
 }
 .consultation__desc {
   color: #fff;

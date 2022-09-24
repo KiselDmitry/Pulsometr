@@ -8,5 +8,8 @@
 		text-align: left;
 		color: #fff;
 		font-size: 36px;
+		@media (max-width: $br-sm) {
+			font-size: 24px;
+		}
 	}
 }
