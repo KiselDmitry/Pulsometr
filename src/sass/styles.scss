@@ -20,6 +20,10 @@ body {
 	box-sizing: content-box;
 	
 }
+
+@import "blocks/buttons";
+@import "blocks/title";
 @import "blocks/promo";
 @import "blocks/header";
-@import "blocks/buttons";
+@import "blocks/benefits";
+

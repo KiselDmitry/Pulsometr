@@ -3,6 +3,10 @@
 	min-height: 650px;
 	padding: 21px 0px 93px 0px;
 	background: url(../img/main.jpg) center (center/cover) no-repeat;
+	@media (max-width: 400px){
+		padding: 10px 0px 40px 0px;
+		min-height: 550px;
+	}
 	&__wrapper {
 		margin: 90px 0px 0px 0px;
 		display: flex;
