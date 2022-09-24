@@ -1,1 +1,9 @@
 $main-color: #c70101;
+$breakpoints: (
+  my-xs: 0,
+  my-sm: 576px,
+  my-md: 768px,
+  my-lg: 992px,
+  my-xl: 1200px,
+  my-xxl: 1400px
+);

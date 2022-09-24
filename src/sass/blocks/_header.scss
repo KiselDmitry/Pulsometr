@@ -5,6 +5,12 @@
 		img {
 			width: 100%;
 		}
+		@media(max-width: 576px){
+			width: 200px;
+		}
+		@media(max-width: 405px){
+			width: 150px;
+		}
 	}
 	&__official {
 		color: #fff;
@@ -14,6 +20,9 @@
 		span {
 			display: block;
 			font-size: 18px;
+		}
+		@media(max-width: 660px){
+			display: none;
 		}
 	}
 	&__contacts {
@@ -28,5 +37,8 @@
 		font-size: 18px;
 		font-weight: 700;
 		text-decoration: none;
+		@media(max-width: 576px){
+			font-size: 14px;
+		}
 	}
 }
