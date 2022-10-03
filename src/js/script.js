@@ -1,23 +1,22 @@
-$(document).ready(function(){
-	$('.carusel__inner').slick({
-		speed: 1200,
-		adaptiveHeight: true,
-		// autoplay: true,
-		// autoplaySpeed: 2000,
-		prevArrow: '<button type="button" class="slick-prev"><img src="../icons/right.svg"></button>',
-		nextArrow: '<button type="button" class="slick-next"><img src="../icons/left.svg"></button>',
-		responsive: [
-			{
-				breakpoint: 768,
-     			settings: {
-					dots: true,
-					//dotsClass: 'slick-dots',
-					arrows: false,
-					centerMode: true,
-					centerPadding: '40px'
-					
-      		}
-			}
-		]
-	 });
- });
+"use script";
+
+let offset = 0;
+const sliderLine = document.querySelector(".slider__line");
+const sliderNext = document.querySelector(".slider-next");
+const sliderPrev = document.querySelector(".slider-prev");
+
+sliderNext.addEventListener('click', function () {
+	offset = offset + 750;
+	if (offset > 2250) {
+		offset = 0;
+	}
+	sliderLine.style.left = -offset + 'px';
+});
+
+sliderPrev.addEventListener('click', function () {
+	offset = offset - 750;
+	if (offset < 0) {
+		offset = 2250;
+	}
+	sliderLine.style.left = -offset + 'px';
+});
