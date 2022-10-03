@@ -1,22 +1,43 @@
 "use script";
 
-let offset = 0;
+const imeges = document.querySelectorAll(".slider .slider__line img");
 const sliderLine = document.querySelector(".slider__line");
+let count = 0;
+let width;
+
 const sliderNext = document.querySelector(".slider-next");
 const sliderPrev = document.querySelector(".slider-prev");
 
+function init() {
+	console.log('resize');
+	width = document.querySelector(".slider").offsetWidth;
+	sliderLine.style.width = width * imeges.length + 'px';
+	imeges.forEach(item => {
+		item.style.width = width + 'px';
+		item.style.height = 'auto';
+	})
+	rollSlider();
+};
+
+window.addEventListener('resize', init);
+init();
+
 sliderNext.addEventListener('click', function () {
-	offset = offset + 750;
-	if (offset > 2250) {
-		offset = 0;
+	count++;
+	if (count >= imeges.length) {
+		count = 0;
 	}
-	sliderLine.style.left = -offset + 'px';
+	rollSlider();
 });
 
 sliderPrev.addEventListener('click', function () {
-	offset = offset - 750;
-	if (offset < 0) {
-		offset = 2250;
+	count--;
+	if (count < 0) {
+		count = imeges.length - 1;
 	}
-	sliderLine.style.left = -offset + 'px';
+	rollSlider();
 });
+
+function rollSlider() {
+	sliderLine.style.transform = 'translate(-' + count * width + 'px)';
+}

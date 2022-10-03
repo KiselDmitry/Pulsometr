@@ -1,26 +1,14 @@
 .carousel {
 	padding: 81px 0px 81px 0px;
 	.slider {
-		width: 750px;
-		height: 580px;
 		border: 2px solid #000;
-		margin: 0 auto;
+		max-width: 80%;
+		margin: 20px auto;
 		overflow: hidden;
 		&__line {
-			width: 3000px;
 			display: flex;
-			background-color: orange;
-			position: relative;
-			left: 0;
-			transition: left ease 1s;
-		}
-		&__img {
-			width: 750px;
-			height: 580px;
-			img {
-				width: 100%;
-				height: 100%;
-			}
+			background-color: orangered;
+			transition: all ease 1s;
 		}
 	}
 	
